@@ -9,7 +9,6 @@ import UIKit
 
 class CustomButton: UIButton {
     var action: (() -> Void)?
-    
     init(title: String? = nil, titleColor: UIColor? = nil) {
             super.init(frame: .zero)
             self.setTitle(title, for: .normal)
@@ -17,7 +16,6 @@ class CustomButton: UIButton {
             self.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
             self.translatesAutoresizingMaskIntoConstraints = false
         }
-    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

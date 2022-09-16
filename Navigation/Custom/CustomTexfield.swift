@@ -19,7 +19,7 @@ class CustomTextField: UITextField {
         self.layer.borderColor = borderColor
         self.translatesAutoresizingMaskIntoConstraints = false
         }
-    
+    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

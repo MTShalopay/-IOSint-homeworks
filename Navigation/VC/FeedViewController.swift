@@ -50,7 +50,7 @@ class FeedViewController: UIViewController {
         wordTextField.layer.cornerRadius = 5
         return wordTextField
     }()
-        
+    
     private lazy var labelCheck: UILabel = {
        let labelCheck = UILabel()
         labelCheck.textColor = .black
@@ -133,10 +133,15 @@ class FeedViewController: UIViewController {
         }
         checkGuessButton.action = {
             guard let word = self.wordTextField.text else { return }
+            self.navigationController?.pushViewController(postVC, animated: true)
+        }
+        checkGuessButton.action = {
+            if let word = self.wordTextField.text {
                 let feedModel = FeedModel()
                 let check = feedModel.check(word: word)
                 print(check)
                 check ? self.labelShow(text: "Верно", color: .green) : self.labelShow(text: "Не верно", color: .systemRed)
+            }
         }
     }
         

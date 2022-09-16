@@ -14,5 +14,4 @@ struct FeedModel {
         if secretWord == word { return true }
         return false
     }
-    
 }

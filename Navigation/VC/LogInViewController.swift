@@ -78,15 +78,7 @@ class LogInViewController: UIViewController {
         myButton.layer.cornerRadius = 10
         return myButton
     }()
-    
-//    private lazy var myButton = CustomButton(buttonCustomState: .normal,
-//                                             buttonCustomType: .system,
-//                                             buttonCustomTag: 0,
-//                                              buttonCustomBackground: .blue,
-//                                              buttonCustomSetTitle: "LOG IN",
-//                                              buttonCustomSetTitleColor: .white,
-//                                              buttonCustomTitleFont: UIFont.boldSystemFont(ofSize: 16), buttonCustomCornerRadius: 10)
-    override func viewDidLoad() {
+        override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
         setupGestures()
@@ -160,8 +152,7 @@ class LogInViewController: UIViewController {
                 self.present(alert, animated: true)
             }
         }
-    }
-    
+    }    
     @objc private func didShowKeyboard(_ notification: Notification) {
         if let keyboardFrame: NSValue = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue {
             let keyboardRectangle = keyboardFrame.cgRectValue
