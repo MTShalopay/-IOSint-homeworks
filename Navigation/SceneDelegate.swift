@@ -8,30 +8,31 @@
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
-
+    
     var window: UIWindow?
-
+    var mainCoordinator: MainCoordinator?
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.windowScene = windowScene
-        let loginVC = LogInViewController()
-        //Delegat
-        //loginVC.loginDelegate = LoginInspector()
-        
-        //Factory
-        let factory = MyLoginFactory()
-        loginVC.loginDelegate = factory.makeLoginInspector()
-        
-        let loginNC = UINavigationController(rootViewController: loginVC)
-        let feedNC = UINavigationController(rootViewController: FeedViewController())
-        let tabBarVC = UITabBarController()
-        
-        
-        tabBarVC.setViewControllers([feedNC,loginNC], animated: true)
-        loginVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.square"), tag: 1)
-        window?.rootViewController = tabBarVC
+//        let loginVC = LogInViewController()
+//        //Delegat
+//        //loginVC.loginDelegate = LoginInspector()
+//        //Factory
+//        let factory = MyLoginFactory()
+//        loginVC.loginDelegate = factory.makeLoginInspector()
+//
+//        let loginNC = UINavigationController(rootViewController: loginVC)
+//        let feedNC = UINavigationController(rootViewController: FeedViewController())
+//        let tabBarVC = UITabBarController()
+//        tabBarVC.setViewControllers([feedNC,loginNC], animated: true)
+//        loginVC.tabBarItem = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.crop.square"), tag: 1)
+//        window?.rootViewController = tabBarVC
+        let nagigatorVC = UINavigationController()
+        mainCoordinator = MainCoordinator(navigationController: nagigatorVC)
+        mainCoordinator?.start()
+        window?.rootViewController = nagigatorVC
         window?.makeKeyAndVisible()
     }
 

@@ -79,13 +79,6 @@ class LogInViewController: UIViewController {
         return myButton
     }()
     
-//    private lazy var myButton = CustomButton(buttonCustomState: .normal,
-//                                             buttonCustomType: .system,
-//                                             buttonCustomTag: 0,
-//                                              buttonCustomBackground: .blue,
-//                                              buttonCustomSetTitle: "LOG IN",
-//                                              buttonCustomSetTitleColor: .white,
-//                                              buttonCustomTitleFont: UIFont.boldSystemFont(ofSize: 16), buttonCustomCornerRadius: 10)
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .systemBackground
