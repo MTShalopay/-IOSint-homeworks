@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol UserService {
+    func logIn(login: String, password: String) -> User?
+}
+
 protocol LoginViewControllerDelegate: AnyObject {
     func check(login: String, password: String) -> Bool
 }

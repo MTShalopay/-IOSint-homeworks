@@ -7,10 +7,6 @@
 
 import UIKit
 
-protocol UserService {
-    func logIn(login: String, password: String) -> User?
-}
-
 class User {
     let login: String
     let password: String

@@ -387,6 +387,20 @@
 			path = xcode;
 			sourceTree = "<group>";
 		};
+		494B6CD328DBA43E0060D1FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		494B6CD428DBA44E0060D1FF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		494B778528B52D0300B52949 /* StorageService */ = {
 			isa = PBXGroup;
 			children = (
@@ -437,18 +451,20 @@
 		499896F42840DF5B000ACA06 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				493F2B4D28D4F92800A36453 /* Coordinator */,
-				493F2B4828D4F80A00A36453 /* Protocol */,
 				499896F52840DF5B000ACA06 /* AppDelegate.swift */,
 				499896F72840DF5B000ACA06 /* SceneDelegate.swift */,
-				494EAF3728BE900D00220F50 /* CurrentUserService.swift */,
-				494CFD8228BFFE6700502F5D /* Service.swift */,
-				4924E3CD28C7EBB4004AB046 /* FeedModel.swift */,
+				493F2B4D28D4F92800A36453 /* Coordinator */,
+				493F2B4828D4F80A00A36453 /* Protocol */,
 				4924E3CB28C7E146004AB046 /* Custom */,
 				494CFD8028BFFD6600502F5D /* Delegate */,
 				494EAF3A28BEABA300220F50 /* TestUserService.swift */,
+				494EAF3728BE900D00220F50 /* CurrentUserService.swift */,
+				494CFD8228BFFE6700502F5D /* Service.swift */,
+				4924E3CD28C7EBB4004AB046 /* FeedModel.swift */,
+				494B6CD328DBA43E0060D1FF /* Model */,
 				494EAF2E28BE782600220F50 /* User.swift */,
-				499897142840E0C4000ACA06 /* VC */,
+				494B6CD428DBA44E0060D1FF /* ViewModel */,
+				499897142840E0C4000ACA06 /* ViewController */,
 				499897292840F641000ACA06 /* Profile */,
 				493FB19E285E7452007A033F /* Cell */,
 				499896FE2840DF5F000ACA06 /* Assets.xcassets */,
@@ -458,7 +474,7 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		499897142840E0C4000ACA06 /* VC */ = {
+		499897142840E0C4000ACA06 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				499897112840E074000ACA06 /* FeedViewController.swift */,
@@ -466,7 +482,7 @@
 				4998970E2840E059000ACA06 /* ProfileViewController.swift */,
 				49491862285D21A900EF004F /* PhotosViewController.swift */,
 			);
-			path = VC;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		499897292840F641000ACA06 /* Profile */ = {
