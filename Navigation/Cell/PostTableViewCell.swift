@@ -138,9 +138,10 @@ class PostTableViewCell: UITableViewCell {
         //MARK: Решение задачи 3*
         
         guard let sourceImage = UIImage(named: post.image) else { return }
-        imageProcessor.processImage(sourceImage: sourceImage, filter: .crystallize(radius: 10)) { image in
-            myImageView.image = image
-        }
+            imageProcessor.processImage(sourceImage: sourceImage, filter: .crystallize(radius: 10)) { image in
+                myImageView.image = image
+            }
+        
         descriptionLb.text = post.description
         likesCount.text = String(post.likes)
         viewsCount.text = String(post.views)

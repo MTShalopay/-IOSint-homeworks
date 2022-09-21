@@ -8,7 +8,10 @@
 import UIKit
 
 class LogInViewController: UIViewController {
-     var loginDelegate: LoginViewControllerDelegate?
+    var loginDelegate: LoginViewControllerDelegate?
+    //MARK: Добавялю переменную чтобы через координатор перейти на ProfileVC
+    weak var profileCoordinator: ProfileCoordinator?
+     
 
     private let currentUserService = CurrentUserService()
     private let testUserService = TestUserService()
@@ -87,7 +90,6 @@ class LogInViewController: UIViewController {
         stateMyButton(sender: myButton)
         actionButton()
         
-        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -145,6 +147,8 @@ class LogInViewController: UIViewController {
             guard let loginDelegate = self.loginDelegate, let login = self.emailTextField.text, let password = self.passTextField.text else { return }
             
             if loginDelegate.check(login: login, password: password) {
+            //MARK: через координатор хочу отобразить ProfileVC но не получается приходит nil =(
+                // вот этот способ работает
                 let profileVC = ProfileViewController()
                 self.navigationController?.pushViewController(profileVC, animated: true)
             } else {
