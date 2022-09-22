@@ -417,7 +417,7 @@
 				494CFD8028BFFD6600502F5D /* Delegate */,
 				494EAF3A28BEABA300220F50 /* TestUserService.swift */,
 				494EAF2E28BE782600220F50 /* User.swift */,
-				499897142840E0C4000ACA06 /* VC */,
+				499897142840E0C4000ACA06 /* View */,
 				499897292840F641000ACA06 /* Profile */,
 				493FB19E285E7452007A033F /* Cell */,
 				499896FE2840DF5F000ACA06 /* Assets.xcassets */,
@@ -427,7 +427,7 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		499897142840E0C4000ACA06 /* VC */ = {
+		499897142840E0C4000ACA06 /* View */ = {
 			isa = PBXGroup;
 			children = (
 				499897112840E074000ACA06 /* FeedViewController.swift */,
@@ -435,7 +435,7 @@
 				4998970E2840E059000ACA06 /* ProfileViewController.swift */,
 				49491862285D21A900EF004F /* PhotosViewController.swift */,
 			);
-			path = VC;
+			path = View;
 			sourceTree = "<group>";
 		};
 		499897292840F641000ACA06 /* Profile */ = {
